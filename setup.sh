@@ -17,12 +17,9 @@ port = $PORT\n\
 enableCORS = false\n\
 " > ~/.streamlit/config.toml
 
-# Update pip and setuptools
-pip install --upgrade pip setuptools
 
-# Install development tools
-sudo apt-get update
-sudo apt-get install -y python3-dev build-essential
+pip install --upgrade setuptools
+python -c "import distutils"
 
 # Install numpy
 pip install numpy==1.19.3
