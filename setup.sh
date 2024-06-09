@@ -45,3 +45,6 @@ pip install -r /mount/src/steamlit-bcd-app/requirements.txt
 
 # Fix for distutils module missing error
 python3 -m ensurepip --upgrade
+
+# Try installing numpy 1.19.5 again
+pip install numpy==1.19.5
