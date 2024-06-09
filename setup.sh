@@ -26,7 +26,8 @@ apt-get update && apt-get install -y \
   build-essential \
   python3-apt \
   python3-pip \
-  python3-all
+  python3-all \
+  python3-distutils  # Added this line
 
 # Install wheel to help with building packages
 pip install wheel
