@@ -27,7 +27,7 @@ apt-get update && apt-get install -y \
   python3-apt \
   python3-pip \
   python3-all \
-  python3-distutils  # Added this line
+  python3-distutils  # Ensure distutils is installed for older Python versions
 
 # Install wheel to help with building packages
 pip install wheel
