@@ -25,13 +25,8 @@ apt-get update && apt-get install -y \
   python3-dev \
   build-essential \
   python3-apt \
-  python3-pip
-
-# Ensure distutils is available
-if ! python3 -c "import distutils" &> /dev/null
-then
-    apt-get install -y python3-distutils
-fi
+  python3-pip \
+  python3-all
 
 # Install wheel to help with building packages
 pip install wheel
@@ -44,9 +39,6 @@ pip install -r /mount/src/steamlit-bcd-app/requirements.txt
 
 # Fix for distutils module missing error
 python3 -m ensurepip --upgrade
-
-# Install distutils
-apt-get update && apt-get install -y python3-distutils
 
 # Try installing numpy 1.19.5 again
 pip install numpy==1.19.5
