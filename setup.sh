@@ -24,28 +24,21 @@ pip install --upgrade pip setuptools
 apt-get update && apt-get install -y \
   python3-distutils \
   python3-dev \
-  build-essential
+  build-essential \
+  python3-apt \
+  python3-pip
 
-# Install distutils
-apt-get install -y python3-apt
-
-# Check and install pip for Python 3
-if ! command -v pip3 &> /dev/null
-then
-    apt-get install -y python3-pip
-fi
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Check for missing modules and install them
+# Ensure distutils is available
 if ! python3 -c "import distutils" &> /dev/null
 then
     apt-get install -y python3-distutils
 fi
 
-# Additional steps to ensure numpy is installed properly
+# Install wheel to help with building packages
+pip install wheel
+
+# Install numpy separately to avoid issues with other dependencies
 pip install numpy==1.19.5 --no-cache-dir
 
 # Finally, install the rest of the dependencies
-pip install -r requirements.txt
+pip install -r /mount/src/steamlit-bcd-app/requirements.txt
