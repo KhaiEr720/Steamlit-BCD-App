@@ -22,7 +22,11 @@ pip install --upgrade pip setuptools
 
 pip install distutils
 
-pip install numpy==1.19.5
+sudo apt-get update
+sudo apt-get install python3-dev build-essential
+
+pip install numpy==1.19.3
+
 
 
 # Install Python dependencies from requirements file
