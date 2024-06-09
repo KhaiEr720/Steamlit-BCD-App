@@ -17,12 +17,8 @@ port = $PORT\n\
 enableCORS = false\n\
 " > ~/.streamlit/config.toml
 
-
+# Upgrade setuptools to ensure distutils is available
 pip install --upgrade setuptools
-python -c "import distutils"
-
-# Install numpy
-pip install numpy==1.19.3
 
 # Install Python dependencies from requirements file
 pip install -r /mount/src/steamlit-bcd-app/requirements.txt
