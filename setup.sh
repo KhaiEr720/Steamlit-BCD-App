@@ -38,7 +38,7 @@ fi
 pip install wheel
 
 # Install numpy separately to avoid issues with other dependencies
-pip install numpy==1.19.5 --no-cache-dir
+pip install numpy==1.19.3
 
 # Install Python dependencies from requirements file
 pip install -r /mount/src/steamlit-bcd-app/requirements.txt
