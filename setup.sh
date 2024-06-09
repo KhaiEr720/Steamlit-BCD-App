@@ -47,3 +47,7 @@ python3 -m ensurepip --upgrade
 
 # Try installing numpy 1.19.5 again
 pip install numpy==1.19.5
+
+# Install distutils
+apt-get update && apt-get install -y python3-distutils
+
