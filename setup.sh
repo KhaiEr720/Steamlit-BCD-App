@@ -20,25 +20,11 @@ enableCORS = false\n\
 # Update pip and setuptools
 pip install --upgrade pip setuptools
 
-# Install system dependencies
-apt-get update && apt-get install -y \
-  python3-dev \
-  build-essential \
-  python3-apt \
-  python3-pip \
-  python3-all
+pip install distutils
 
-# Install wheel to help with building packages
-pip install wheel
-
-# Install numpy separately to avoid issues with other dependencies
 pip install numpy==1.19.5
+
 
 # Install Python dependencies from requirements file
 pip install -r /mount/src/steamlit-bcd-app/requirements.txt
 
-# Fix for distutils module missing error
-python3 -m ensurepip --upgrade
-
-# Try installing numpy 1.19.5 again
-pip install numpy==1.19.5
