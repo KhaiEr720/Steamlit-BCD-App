@@ -20,15 +20,12 @@ enableCORS = false\n\
 # Update pip and setuptools
 pip install --upgrade pip setuptools
 
-pip install distutils
-
+# Install development tools
 sudo apt-get update
-sudo apt-get install python3-dev build-essential
+sudo apt-get install -y python3-dev build-essential
 
+# Install numpy
 pip install numpy==1.19.3
-
-
 
 # Install Python dependencies from requirements file
 pip install -r /mount/src/steamlit-bcd-app/requirements.txt
-
