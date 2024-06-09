@@ -29,7 +29,7 @@ email = \"your-email@domain.com\"\n\
 echo "\
 [server]\n\
 headless = true\n\
-port = $PORT\n\
+port = \$PORT\n\
 enableCORS = false\n\
 " > ~/.streamlit/config.toml
 
@@ -37,7 +37,7 @@ enableCORS = false\n\
 pip install --upgrade setuptools
 
 # Install numpy
-pip install numpy==1.19.3
+pip install numpy==1.26.0
 
 # Install Python dependencies from requirements file
 pip install -r /mount/src/steamlit-bcd-app/requirements.txt
